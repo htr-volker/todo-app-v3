@@ -51,7 +51,7 @@ class TestCreate(TestBase):
             follow_redirects=True
         )
         new_task = Tasks.query.get(2)
-        self.assertEqual("Add a task", new_task.description)
+        self.assertEqual("Add a new task", new_task.description)
 
     def test_create_task_redirect(self):
         response = self.client.post(
